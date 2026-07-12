@@ -1,4 +1,4 @@
-# Topic 3B — Lab Questions
+# Topic 3B  Lab Questions
 
 > ⚠️ **Remember:** Every PHP file must have a comment block with your name, registration number, and date at the top. Use your personal `A, B, C, D` values from the main README.
 
@@ -21,10 +21,10 @@ Create a class `BankAccount` with the following:
 
 **Methods:**
 
-1. `__construct(string $accountNo, string $holderName, float $initialDeposit)` — sets all properties and **echoes**: `"Account XXXX created for NAME with Rs. BALANCE deposit."`
-2. `deposit(float $amount): void` — adds to balance, echoes: `"Deposited Rs. AMOUNT. New balance: Rs. BALANCE"`
-3. `withdraw(float $amount): bool` — if sufficient balance, deducts and returns `true`; otherwise echoes `"Insufficient balance!"` and returns `false`
-4. `__destruct()` — echoes: `"Account XXXX closed. Final balance: Rs. BALANCE. Goodbye, NAME!"`
+1. `__construct(string $accountNo, string $holderName, float $initialDeposit)`  sets all properties and **echoes**: `"Account XXXX created for NAME with Rs. BALANCE deposit."`
+2. `deposit(float $amount): void`  adds to balance, echoes: `"Deposited Rs. AMOUNT. New balance: Rs. BALANCE"`
+3. `withdraw(float $amount): bool`  if sufficient balance, deducts and returns `true`; otherwise echoes `"Insufficient balance!"` and returns `false`
+4. `__destruct()`  echoes: `"Account XXXX closed. Final balance: Rs. BALANCE. Goodbye, NAME!"`
 
 ### The Personalized Twist
 
@@ -33,14 +33,14 @@ Create a class `BankAccount` with the following:
 - The **initial deposit** must be `5000 + (A * 1000)`  
   (e.g., A=8 → Rs. 13000)
 - The holder's **first name** must contain exactly `B` characters  
-  (e.g., B=5 → "Aarav" is 5 letters ✓ — "Ram" is 3 letters ✗)
+  (e.g., B=5 → "Aarav" is 5 letters ✓  "Ram" is 3 letters ✗)
 
 ### What to Submit (`3B-q1.php`)
 
 - Create **1 BankAccount** object with details satisfying the rules above
 - Deposit an amount equal to `C * 100` (e.g., C=15 → Rs. 1500)
 - Try to withdraw an amount equal to `5000 + (A + B) * 100`  
-  (e.g., A=8, B=5 → Rs. 6300) — this may or may not succeed depending on your values
+  (e.g., A=8, B=5 → Rs. 6300)  this may or may not succeed depending on your values
 - Unset the object to trigger the destructor
 - **At the very end of the file**, add a comment with your calculated balance check showing the math
 
@@ -73,12 +73,12 @@ Create a class `Enrollment` with the following:
 
 **Methods:**
 
-1. `__construct(string $studentName, string $courseCode, string $semester, float $fee)` — set all properties, echo `"ENROLLED: NAME in COURSE (SEMESTER) — Rs. FEE"`
-2. `__destruct()` — echo `"UNENROLLED: NAME — COURSE. Refund processed for Rs. FEE."`
+1. `__construct(string $studentName, string $courseCode, string $semester, float $fee)`  set all properties, echo `"ENROLLED: NAME in COURSE (SEMESTER)  Rs. FEE"`
+2. `__destruct()`  echo `"UNENROLLED: NAME  COURSE. Refund processed for Rs. FEE."`
 
 **Static property (class-level):**
 
-- `public static int $totalEnrollments = 0;` — increment inside constructor
+- `public static int $totalEnrollments = 0;`  increment inside constructor
 
 ### The Personalized Twist
 
@@ -96,17 +96,17 @@ Create a class `Enrollment` with the following:
 
 - Create 3 enrollment objects
 - After creating all 3, echo: `"Total enrollments this session: " . Enrollment::$totalEnrollments`
-- Do NOT manually `unset()` any objects — let the script end trigger destructors naturally
+- Do NOT manually `unset()` any objects  let the script end trigger destructors naturally
 - The destructors will fire in reverse order of creation (LIFO)
 
 **Expected output format (example):**
 
 ```
-ENROLLED: Aarav BCA8 in CACS252 (4th Sem) — Rs. 12750
-ENROLLED: Aarav BIT5 in CACS253 (4th Sem) — Rs. 15450
-ENROLLED: Aarav BCA2 in CACS254 (4th Sem) — Rs. 9500
+ENROLLED: Aarav BCA8 in CACS252 (4th Sem)  Rs. 12750
+ENROLLED: Aarav BIT5 in CACS253 (4th Sem)  Rs. 15450
+ENROLLED: Aarav BCA2 in CACS254 (4th Sem)  Rs. 9500
 Total enrollments this session: 3
-UNENROLLED: Aarav BCA2 — CACS254. Refund processed for Rs. 9500.
-UNENROLLED: Aarav BIT5 — CACS253. Refund processed for Rs. 15450.
-UNENROLLED: Aarav BCA8 — CACS252. Refund processed for Rs. 12750.
+UNENROLLED: Aarav BCA2  CACS254. Refund processed for Rs. 9500.
+UNENROLLED: Aarav BIT5  CACS253. Refund processed for Rs. 15450.
+UNENROLLED: Aarav BCA8  CACS252. Refund processed for Rs. 12750.
 ```

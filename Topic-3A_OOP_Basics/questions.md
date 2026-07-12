@@ -1,4 +1,4 @@
-# Topic 3A — Lab Questions
+# Topic 3A  Lab Questions
 
 > ⚠️ **Remember:** Every PHP file must have a comment block with your name, registration number, and date at the top. Use your personal `A, B, C, D` values from the main README.
 
@@ -22,9 +22,9 @@ Create a class `Book` with the following specifications:
 
 **Methods:**
 
-1. `setDetails(string $title, string $author, string $genre, string $accessionNo): void` — assigns all properties
-2. `getDetails(): string` — returns a formatted string like: `"ACC-001: Programming in PHP by John Doe [Academic]"`
-3. `matchesGenre(string $genre): bool` — returns `true` if the book's genre matches the given parameter
+1. `setDetails(string $title, string $author, string $genre, string $accessionNo): void`  assigns all properties
+2. `getDetails(): string`  returns a formatted string like: `"ACC-001: Programming in PHP by John Doe [Academic]"`
+3. `matchesGenre(string $genre): bool`  returns `true` if the book's genre matches the given parameter
 
 ### The Personalized Twist
 
@@ -73,10 +73,10 @@ Create a class `Laptop` with the following:
 
 **Methods:**
 
-1. `__construct(string $brand, string $model, float $price, int $stock)` — sets all properties
-2. `applyDiscount(float $percent): void` — reduces price by given percentage
-3. `sell(int $qty): bool` — reduces stock by `$qty` if enough stock exists, returns `true`; otherwise returns `false` and does nothing
-4. `getInfo(): string` — returns `"BRAND MODEL — Rs. PRICE (QTY in stock)"`
+1. `__construct(string $brand, string $model, float $price, int $stock)`  sets all properties
+2. `applyDiscount(float $percent): void`  reduces price by given percentage
+3. `sell(int $qty): bool`  reduces stock by `$qty` if enough stock exists, returns `true`; otherwise returns `false` and does nothing
+4. `getInfo(): string`  returns `"BRAND MODEL  Rs. PRICE (QTY in stock)"`
 
 ### The Personalized Twist
 
@@ -85,11 +85,11 @@ Create a class `Laptop` with the following:
 - The **stock** of the second laptop must be equal to `A + B`  
   (e.g., A=8, B=5 → 13 units)
 - For the **third laptop**, the brand name length must be exactly `D + 3` characters  
-  (e.g., D=2 → brand name must be 5 letters, like "ASUS" is 4 — no, try "Lenovo" is 6 — match your D)
+  (e.g., D=2 → brand name must be 5 letters, like "ASUS" is 4  no, try "Lenovo" is 6  match your D)
 
 ### What to Submit (`3A-q2.php`)
 
-- Create 3 laptop objects with realistic brands (Dell, HP, Lenovo, Acer, ASUS — but respect the length rule for #3)
+- Create 3 laptop objects with realistic brands (Dell, HP, Lenovo, Acer, ASUS  but respect the length rule for #3)
 - Call `sell(int)` on the first laptop with `$qty = A + 1` and print whether it succeeded
 - Apply a discount of `(A + B)%` to the second laptop, then print its info
 - Try to sell `999` units of the third laptop (should fail), print the result
@@ -99,9 +99,9 @@ Create a class `Laptop` with the following:
 
 ```
 Sold 6 units of Dell? 1
-HP Pavilion — Rs. 10349.1 (13 in stock)
+HP Pavilion  Rs. 10349.1 (13 in stock)
 Sold 999 units of Lenovo? 
-Dell Inspiron — Rs. 69999 (4 in stock)
-HP Pavilion — Rs. 10349.1 (13 in stock)
-Lenovo IdeaPad — Rs. 45000 (7 in stock)
+Dell Inspiron  Rs. 69999 (4 in stock)
+HP Pavilion  Rs. 10349.1 (13 in stock)
+Lenovo IdeaPad  Rs. 45000 (7 in stock)
 ```

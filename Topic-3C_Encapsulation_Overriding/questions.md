@@ -1,4 +1,4 @@
-# Topic 3C — Lab Questions
+# Topic 3C  Lab Questions
 
 > ⚠️ **Remember:** Every PHP file must have a comment block with your name, registration number, and date at the top. Use your personal `A, B, C, D` values from the main README.
 
@@ -17,16 +17,16 @@ Create a **parent class** `Employee` with the following:
 |----------|-----------|------|-------------|
 | `$name` | `public` | `string` | Employee name |
 | `$id` | `protected` | `string` | Employee ID (accessible in child) |
-| `$salary` | `private` | `float` | Monthly salary — ONLY accessible in Employee |
+| `$salary` | `private` | `float` | Monthly salary  ONLY accessible in Employee |
 
 **Methods:**
 
-1. `__construct(string $name, string $id, float $initialSalary)` — sets properties using the setter for salary (so validation applies even during construction)
-2. `setSalary(float $amount): void` — **Setter with validation**:
+1. `__construct(string $name, string $id, float $initialSalary)`  sets properties using the setter for salary (so validation applies even during construction)
+2. `setSalary(float $amount): void`  **Setter with validation**:
    - If `$amount >= 10000 && $amount <= 200000`, set it
    - Else echo: `"Salary REJECTED: Rs. AMOUNT is outside valid range (10000-200000)"`
-3. `getSalary(): float` — **Getter** returning the private salary
-4. `displayInfo(): string` — returns `"ID: NAME — Rs. SALARY"`
+3. `getSalary(): float`  **Getter** returning the private salary
+4. `displayInfo(): string`  returns `"ID: NAME  Rs. SALARY"`
 
 ### The Personalized Twist
 
@@ -44,10 +44,10 @@ Now create a **child class** `SeniorDeveloper extends Employee`:
 
 **Methods:**
 
-1. `__construct(string $name, string $id, float $baseSalary, float $bonusPercent)` — calls parent constructor, then sets `$this->bonusPercent`
-2. `setSalary(float $amount): void` — **Override** the parent setter with a **higher range**: `20000 to 500000`. Any amount outside this is rejected.
-3. `getAnnualPackage(): float` — returns `(salary * 12) * (1 + bonusPercent/100)`
-4. `displayInfo(): string` — **Override** to return: `"SENIOR: ID: NAME — Rs. SALARY/month | Bonus: BONUS% | Annual: Rs. PACKAGE"`
+1. `__construct(string $name, string $id, float $baseSalary, float $bonusPercent)`  calls parent constructor, then sets `$this->bonusPercent`
+2. `setSalary(float $amount): void`  **Override** the parent setter with a **higher range**: `20000 to 500000`. Any amount outside this is rejected.
+3. `getAnnualPackage(): float`  returns `(salary * 12) * (1 + bonusPercent/100)`
+4. `displayInfo(): string`  **Override** to return: `"SENIOR: ID: NAME  Rs. SALARY/month | Bonus: BONUS% | Annual: Rs. PACKAGE"`
 
 ### What to Submit (`3C-q1.php`)
 
@@ -64,9 +64,9 @@ Now create a **child class** `SeniorDeveloper extends Employee`:
 
 ```
 Salary REJECTED: Rs. 5000 is outside valid range (10000-200000)
-ID: EMP-1086: Aarav — Rs. 35000
+ID: EMP-1086: Aarav  Rs. 35000
 Salary REJECTED: Rs. 15000 is outside valid range (20000-500000)
-SENIOR: EMP-2085: Aarav — Rs. 25000/month | Bonus: 18% | Annual: Rs. 354000
+SENIOR: EMP-2085: Aarav  Rs. 25000/month | Bonus: 18% | Annual: Rs. 354000
 ```
 
 ---
@@ -83,16 +83,16 @@ Create a class `Product` with:
 | Property | Visibility | Type | Description |
 |----------|-----------|------|-------------|
 | `$name` | `public` | `string` | Product name |
-| `$code` | `private` | `string` | Product code — set once, never changed |
+| `$code` | `private` | `string` | Product code  set once, never changed |
 | `$price` | `private` | `float` | Unit price |
 
 **Methods:**
 
-1. `__construct(string $name, string $code, float $price)` — uses setter for price
-2. `getCode(): string` — **public getter** for the private `$code` (read-only access)
-3. `setPrice(float $price): void` — validates: price must be between `100` and `100000`. Reject otherwise with a message.
-4. `getPrice(): float` — getter
-5. `getInfo(): string` — returns `"[CODE] NAME — Rs. PRICE"`
+1. `__construct(string $name, string $code, float $price)`  uses setter for price
+2. `getCode(): string`  **public getter** for the private `$code` (read-only access)
+3. `setPrice(float $price): void`  validates: price must be between `100` and `100000`. Reject otherwise with a message.
+4. `getPrice(): float`  getter
+5. `getInfo(): string`  returns `"[CODE] NAME  Rs. PRICE"`
 
 ### The Personalized Twist
 
@@ -102,15 +102,15 @@ Create a class `Product` with:
   - Product 2: `"PROD-" . D . C`         (e.g., D=2, C=15 → "PROD-215")
   - Product 3: `"PROD-" . B . A . D`     (e.g., B=5, A=8, D=2 → "PROD-582")
 - Product names must contain exactly `D + 4` letters  
-  (e.g., D=2 → 6 letters: "Kurkure" ✓, "Laptop" is 6 ✓ — but "Biscuit" is 7 ✗)
+  (e.g., D=2 → 6 letters: "Kurkure" ✓, "Laptop" is 6 ✓  but "Biscuit" is 7 ✗)
 
 Now create a child class `VIPProduct extends Product`:
 
 **Methods:**
 
-1. `__construct(string $name, string $code, float $basePrice, float $vipMarkup)` — calls parent with `$basePrice * (1 + $vipMarkup/100)` as the price
-2. `setPrice(float $price): void` — **Override**: VIP products can have prices from `1000` to `500000`. Reject otherwise.
-3. `getInfo(): string` — **Override** to: `"[CODE] NAME — Rs. PRICE [VIP ONLY]"`
+1. `__construct(string $name, string $code, float $basePrice, float $vipMarkup)`  calls parent with `$basePrice * (1 + $vipMarkup/100)` as the price
+2. `setPrice(float $price): void`  **Override**: VIP products can have prices from `1000` to `500000`. Reject otherwise.
+3. `getInfo(): string`  **Override** to: `"[CODE] NAME  Rs. PRICE [VIP ONLY]"`
 
 ### What to Submit (`3C-q2.php`)
 
@@ -129,11 +129,11 @@ Now create a child class `VIPProduct extends Product`:
 **Expected output format (example):**
 
 ```
-[PROD-805] Kurkure — Rs. 20
-[PROD-215] Laptop — Rs. 55000
-[PROD-582] Tshirt — Rs. 1200
+[PROD-805] Kurkure  Rs. 20
+[PROD-215] Laptop  Rs. 55000
+[PROD-582] Tshirt  Rs. 1200
 Price REJECTED: Rs. 50 is outside valid range (100-100000)
-[PROD-215] Laptop — Rs. 1149
+[PROD-215] Laptop  Rs. 1149
 Price REJECTED: Rs. 500 is outside valid range (1000-500000)
-[VIP-132] Bluetooth Speaker — Rs. 5500 [VIP ONLY]
+[VIP-132] Bluetooth Speaker  Rs. 5500 [VIP ONLY]
 ```

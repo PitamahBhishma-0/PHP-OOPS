@@ -1,4 +1,4 @@
-# Topic 3C — Encapsulation & Method Overriding
+# Topic 3C  Encapsulation & Method Overriding
 
 ## Key Concepts
 - Visibility modifiers: `public`, `protected`, `private`
@@ -8,4 +8,4 @@
 - Data integrity through encapsulation
 
 ## Self-Study Reference
-Review **Module 3C** in the study material before attempting these questions.
+Review **[Module 3C](../Study/Unit-3.pdf#page=8)** in the study material before attempting these questions.

@@ -1,4 +1,4 @@
-# Topic 3D — Lab Questions
+# Topic 3D  Lab Questions
 
 > ⚠️ **Remember:** Every PHP file must have a comment block with your name, registration number, and date at the top. Use your personal `A, B, C, D` values from the main README.
 
@@ -21,11 +21,11 @@ Create an **abstract class** `Vehicle`:
 
 **Methods:**
 
-1. `__construct(string $brand, string $model, int $year)` — set all properties
-2. `abstract public function fuelEfficiency(): float` — returns km per liter
-3. `abstract public function maxSpeed(): int` — returns max speed in km/h
-4. `public function getInfo(): string` — returns `"YEAR BRAND MODEL"`
-5. `public function compare(Vehicle $other): string` — return `"INFO is more efficient than OTHER_INFO"` if this vehicle's fuel efficiency is higher, or `"INFO is less efficient than OTHER_INFO"` otherwise. Use late binding — call `$this->fuelEfficiency()` and `$other->fuelEfficiency()`.
+1. `__construct(string $brand, string $model, int $year)`  set all properties
+2. `abstract public function fuelEfficiency(): float`  returns km per liter
+3. `abstract public function maxSpeed(): int`  returns max speed in km/h
+4. `public function getInfo(): string`  returns `"YEAR BRAND MODEL"`
+5. `public function compare(Vehicle $other): string`  return `"INFO is more efficient than OTHER_INFO"` if this vehicle's fuel efficiency is higher, or `"INFO is less efficient than OTHER_INFO"` otherwise. Use late binding  call `$this->fuelEfficiency()` and `$other->fuelEfficiency()`.
 
 ### The Personalized Twist
 
@@ -91,9 +91,9 @@ Create an **interface** `PaymentMethod`:
 
 **Methods (signatures only, no body):**
 
-1. `public function processPayment(float $amount): string` — processes payment, returns a transaction ID
-2. `public function getPaymentType(): string` — returns the type name
-3. `public function validatePayment(): bool` — returns whether the payment is valid
+1. `public function processPayment(float $amount): string`  processes payment, returns a transaction ID
+2. `public function getPaymentType(): string`  returns the type name
+3. `public function validatePayment(): bool`  returns whether the payment is valid
 
 Now create an **abstract class** `OnlinePayment implements PaymentMethod`:
 
@@ -106,9 +106,9 @@ Now create an **abstract class** `OnlinePayment implements PaymentMethod`:
 
 **Methods:**
 
-1. `__construct(float $amount, string $currency)` — generate a unique transaction ID as: `"TXN-" . strtoupper(substr(md5(rand()), 0, 6))`
+1. `__construct(float $amount, string $currency)`  generate a unique transaction ID as: `"TXN-" . strtoupper(substr(md5(rand()), 0, 6))`
 2. `abstract public function processPayment(float $amount): string` (still abstract, children will implement)
-3. `public function getPaymentType(): string` — return the class short name
+3. `public function getPaymentType(): string`  return the class short name
 
 ### The Personalized Twist
 
