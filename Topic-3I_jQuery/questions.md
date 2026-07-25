@@ -1,7 +1,5 @@
 # Topic 3I  Lab Questions
 
-> ⚠️ **Remember:** Every HTML/PHP file must have a comment block with your name, registration number, and date at the top. Use your personal `A, B, C, D` values from the main README.
-
 ---
 
 ## Question 3I-Q1: jQuery Photo Gallery with Effects
