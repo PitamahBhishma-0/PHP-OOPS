@@ -9,7 +9,7 @@
 ## How This Lab Works
 
 Each topic folder contains a `questions.md` with  lab questions.  
-
+Every Students A,B,C,D value asked inside the program will be last 4 digit of registration number. 
 
 ---
 
