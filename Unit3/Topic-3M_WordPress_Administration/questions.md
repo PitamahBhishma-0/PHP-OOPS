@@ -15,13 +15,13 @@
    - Extract into `htdocs/wordpress/` (XAMPP) or `/var/www/html/wordpress/` (LAMP)
 4. **Run the installer** at `http://localhost/wordpress`:
    - Select your language
-   - Database Name: `wp_<A><B><C><D>`
+   - Database Name: `choice of yours`
    - Username: `root`, Password: *(blank on default XAMPP)*, Host: `localhost`
-   - Table Prefix: `wp<A><B><C><D>_` (e.g., `wp8503_`)
+   - Table Prefix: `wp_table`
 5. **Site details:**
-   - Site Title: `Student<A> Blog`
-   - Username: `admin<A>`
-   - Password: at least `8 + D` characters
+   - Site Title: `Student Blog`
+   - Username: `admin`
+   - Password: `password`
    - Email: `student<A>@example.com`
 6. Click **Install WordPress**, then **Log In**
 
