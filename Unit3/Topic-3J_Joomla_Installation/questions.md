@@ -32,54 +32,15 @@ Install Joomla following these steps, using YOUR `A, B, C, D` values for the per
 6. **Finalise:** review the overview screen, click **Install**
 7. **Remove the `/installation` folder** (Joomla refuses to run otherwise)
 
-### The Personalized Twist
-- Database name must be `joomla_<A><B><C><D>`
-- Site name and admin email use your `A`
-- Admin username uses `A` and `B`
-- Admin password minimum length is `8 + D`
-- Table prefix is `j<A><B><C><D>_`
-
 ### What to Submit
 - Screenshot of the Joomla installer **overview** screen
 - Screenshot of the Joomla **frontend** (`http://localhost/joomla`)
 - Screenshot of the Joomla **backend login** (`http://localhost/joomla/administrator`)
 - Short answer: *What is the role of `configuration.php`?*
 
-**Expected result (with A=8, B=5, C=0, D=3):**
+**Expected result**
 - Database `joomla_8503` created
 - Site name `TU BCA Student8 Site` visible on the frontend
 - Backend login page loads at `/administrator`
 
 ---
-
-## Question 3J-Q2: Verify Installation & Explore Backend
-
-**Scenario:** Confirm your Joomla install is complete and functional by checking the generated files and logging into the backend.
-
-### Task
-
-1. In the `joomla/` folder, open `configuration.php` and note:
-   - the `$db` (database) name
-   - the `$dbprefix` value
-2. Confirm the `/installation` folder has been removed
-3. Log in to the backend at `http://localhost/joomla/administrator` with your admin credentials
-4. Navigate to **System → Global Configuration** and note the site name
-5. Create one article under **Content → Articles → New**:
-   - Title: `"Welcome Student" + A`
-   - Category: `Uncategorized`
-   - Body: one short paragraph
-6. View the article on the frontend
-
-### The Personalized Twist
-- The article title uses your `A` value
-- Report your actual `$dbprefix` (e.g., `j8503_`)
-
-### What to Submit
-- Screenshot of the backend **Control Panel** after login
-- Screenshot of the article you created (backend edit screen or frontend view)
-- Note the `$db` name and `$dbprefix` from `configuration.php`
-
-**Expected result (with A=8, B=5, C=0, D=3):**
-- `configuration.php` shows `$db = 'joomla_8503'` and `$dbprefix = 'j8503_'`
-- Backend control panel loads with your site name
-- Article `Welcome Student8` is visible on the frontend
