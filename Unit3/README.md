@@ -2,7 +2,7 @@
 
 **Course:** CACS252 | **BCA 4th Semester**  
 **Language:** PHP, JavaScript, HTML, CSS  
-**Total Topics:** 9 (3A–3I)
+**Total Topics:** 11 (3A–3J, 3M)
 
 ---
 
@@ -72,6 +72,8 @@ Then whenever a question says something like `price = 9999 + (C * 100)`, PHP wil
 | 3G    | `Topic-3G_AJAX_Fundamentals/`        | `fetch()`, JSON endpoints, GET/POST                |
 | 3H    | `Topic-3H_AJAX_with_MySQL/`          | Prepared statements, live search, AJAX INSERT      |
 | 3I    | `Topic-3I_jQuery/`                   | Hide/Show/Fade/Slide, DOM manipulation, jQuery UI  |
+| 3J    | `Topic-3J_Joomla_Installation/`      | CMS, Joomla installation, `configuration.php`      |
+| 3M    | `Topic-3M_WordPress_Administration/` | WordPress install, themes, pages, posts, widgets   |
 
 ---
 
@@ -80,7 +82,7 @@ Then whenever a question says something like `price = 9999 + (C * 100)`, PHP wil
 1. Complete all questions in each topic folder
 2. Include the comment block at the top of every `.php` file
 3. Verify your output matches the expected format shown in the question
-4. Submit the `.php` / `.html` files for each topic
+4. Submit the `.php` / `.html` files for each topic (screenshots for the CMS topics 3J and 3M)
 
 ---
 
